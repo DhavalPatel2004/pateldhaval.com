@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <script
+      src="https://kit.fontawesome.com/b8596e5346.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/images/favicon-16x16.png"
+    />
+    <title>Dhaval's Portfolio</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h1><span>D</span>HAVAL.</h1>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="container">
+          <div class="header-text">
+            <div class="main-text">
+              <h1><span>D</span>haval.</h1>
+              <h2>Software Engineer / Web Developer</h2>
+            </div>
+            <img src="images/Temp.jpg" class="profilePhoto" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------- About ------------------------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/IMG_9705 (2).jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About</h1>
+            <p>
+              Hello, my name is Dhaval Atul Patel. Firstly, I want to thank you
+              for visiting my website! I am currently enrolled at the University
+              of Kentucky on the tract for a Bachelor of Science in Computer
+              Science. I have been passionate about coding for 4+ years and have
+              coded since my first website development class in 2019. I am an
+              innovative thinker that loves to find unique solutions to
+              problems. The beauty that I admire about Computer Science is the
+              never-ending journey to knowledge; being extremely dilligent and
+              hard-working I can't wait to achieve great accomplishments in this
+              field.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('workex')">
+                Work Experience
+              </p>
+              <p class="tab-links" onclick="opentab('clubs')">
+                Clubs/Activities
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="workex">
+              <ul>
+                <li>
+                  <span>Inatech Solution</span> <br />
+                  Programmed and managed SIP Trunks Servers for phone systems at
+                  motels, schools, doctors’ offices, and small businesses.
+                  Increased sales for security systems for homes, schools, and
+                  businesses by 10%. Responded to new customers and provided
+                  assistances with requests. Created and worked on Linux based
+                  programs to increase sales and offer new services
+                </li>
+                <li>
+                  <span>Ma Meladi Inc</span> <br />
+                  Maintained and operated the Ruby2 POS system to help owner
+                  increase sales by roughly 32% within 3 years. Also managed the
+                  inventory and kept track sales using Microsoft Excel and
+                  Elistars
+                </li>
+                <li>
+                  <span>Walmart Inc</span> <br />
+                  Worked on restocking the shelfs, renovating the
+                  department(whole store was undergoing renovations), and
+                  customer support/assistance.
+                </li>
+                <li>
+                  <span> Resident Advisor </span> <br />
+                  Fostered a positive community living experience within
+                  educational institutions. Skilled in promoting an inclusive
+                  environment, resolving conflicts, and providing guidance to
+                  support the personal and academic growth of residents.
+                  Demonstrated ability to build strong relationships and
+                  maintain open communication with diverse student populations.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="clubs">
+              <ul>
+                <li><span>Association for Computing Machinery</span> <br /></li>
+                <li><span>Indian Student Association</span> <br /></li>
+                <li><span>Intramural Volleyball</span></li>
+                <li><span>Tennis</span></li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Bachelor of Science in Computer Science</span> <br />
+                  University of Kentucky - Expected May 2026
+                </li>
+                <li>
+                  <span>Whitley County High School</span> <br />
+                  Williamsburg, KY - May 2022
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------------------Skills------------------------------------------------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="new-skill-style">
+          <div class="services-list">
+            <!--<div class="java">
+                            <i class="fa-brands fa-java"></i>
+                            <h2>Java</h2>
+                    
+                            
+                        </div> -->
+            <div>
+              <i class="fa-solid fa-c"></i>
+
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-plus"></i>
+              <h2>C/C++</h2>
+            </div>
+            <!--<div>
+                            <i class="fa-brands fa-python"></i>
+                            <h2>Python</h2>
+                        </div> -->
+            <div>
+              <i class="fa-brands fa-linux"></i>
+              <h2>Linux</h2>
+            </div>
+            <div>
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-css3-alt"></i>
+              <h2>HTML/CSS</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>MATLAB</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-network-wired"></i>
+              <h2>Ardunio Uno</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-cash-register"></i>
+              <h2>Ruby2 POS</h2>
+            </div>
+            <!--
+                            <div>
+                            <i class="fa-brands fa-node"></i>
+                            <h2>Node JS</h2>
+                            
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-server"></i>
+                            <h2>Socket.IO</h2>
+                            
+                        </div>
+                        -->
+
+            <div>
+              <i class="fa-brands fa-square-js"></i>
+              <h2>Javascript</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------------------New Skills------------------------------------->
+
+    <!--------------------------------Portfolio-------------------------------------->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/EGR103Project.PNG" class="workPictures" />
+            <div class="layer">
+              <h3>Automated Ping-Pong Ball Launcher</h3>
+              <p>
+                Developed the MATLAB code and machine vision to locate the
+                target and launch the ping-pong ball into the target(operated
+                with Ardunio). The launcher with the assist the machine vision
+                resulted in a success launch rate of 98%.
+              </p>
+              <a href="https://github.com/DhavalPatel2004"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/webpageSS1.png" class="workPictures" />
+            <!--https://zapier.com/blog/full-page-screenshots-in-chrome/-->
+            <div class="layer">
+              <h3>Responsive Website (Personal Portfolio & Youtube MockUp)</h3>
+              <p>
+                HTML, CSS, and Javascript to develop various websites that
+                consisted of complex full-stack development.
+              </p>
+              <a href="https://github.com/DhavalPatel2004"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/playingCards.jpeg" class="workPictures" />
+            <div class="layer">
+              <h3>Simulation of Card “War Game” & Two Player “Nim”</h3>
+              <p>
+                Used C++ to develop programs that would replicate the games
+                “War” and “Nim” which consisted of vectors, arrays, and various
+                data structures
+              </p>
+              <a href="https://github.com/DhavalPatel2004"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/TTT.png" class="workPictures" />
+            <div class="layer">
+              <h3>Python Projects</h3>
+              <p>
+                Selenium webscraper to report the current stock price for any
+                company the user enters. Used similar algorithm to report back
+                definition of any word the user desired
+              </p>
+              <p>Tic-Tac-Toe, PDF Merger, Rock-Paper-Scissors, Hangman</p>
+              <a href="https://github.com/DhavalPatel2004"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/DhavalPatel2004" class="btn"> See More</a>
+      </div>
+    </div>
+    <!-------------------------------Contact----------------------------------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>dapa246@uky.edu</p>
+
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/dhaval-patel0" target="blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/DhavalPatel2004" target="blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="mailto:dapa246@uky.edu"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </div>
+            <a
+              href="images/images/Resume3 - 9_19_23.pdf"
+              download
+              class="download-btn"
+              >Download PDF Resume</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+          <div class="contact-right"></div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Dhaval Patel</p>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyul6dxrmunL8d4q_iSnh4hR8Gln9QBqKYN8jsGJ5v3c6xPe7IMUdxdx95G0Ny7TErADQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message Sent Successfully!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

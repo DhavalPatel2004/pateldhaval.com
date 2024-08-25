@@ -1,0 +1,1 @@
+- Hold shift and then press reload to clear cache. This should fix issues if its not making sense. 
