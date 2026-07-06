@@ -1,10 +1,9 @@
-import { content } from "../../content";
-import { resolveAsset } from "../../lib/resolveAsset";
-import { Section } from "../ui/Section";
-import { Tabs } from "../ui/Tabs";
-import "./About.css";
+import { content } from "../content";
+import { resolveAsset } from "../lib/resolveAsset";
+import { Tabs } from "../components/ui/Tabs";
+import "./apps.css";
 
-export function About() {
+export function AboutApp() {
   const { about, workExperience, clubs, education } = content;
 
   const tabs = [
@@ -12,7 +11,7 @@ export function About() {
       id: "work",
       label: "Work Experience",
       content: (
-        <ul className="about__entries">
+        <ul className="app-entries">
           {workExperience.map((job) => (
             <li key={job.title}>
               <h4>{job.title}</h4>
@@ -26,7 +25,7 @@ export function About() {
       id: "clubs",
       label: "Clubs & Activities",
       content: (
-        <ul className="about__entries about__entries--plain">
+        <ul className="app-entries app-entries--plain">
           {clubs.map((club) => (
             <li key={club}>
               <h4>{club}</h4>
@@ -39,7 +38,7 @@ export function About() {
       id: "education",
       label: "Education",
       content: (
-        <ul className="about__entries">
+        <ul className="app-entries">
           {education.map((entry) => (
             <li key={entry.title}>
               <h4>{entry.title}</h4>
@@ -52,16 +51,17 @@ export function About() {
   ];
 
   return (
-    <Section id="about" eyebrow="Who I am" title="About" alt>
-      <div className="about__layout">
-        <div className="about__photo glass">
-          <img src={resolveAsset(about.photo)} alt="Dhaval Patel" loading="lazy" />
-        </div>
-        <div className="about__content">
-          <p className="about__bio">{about.bio}</p>
-          <Tabs items={tabs} />
-        </div>
+    <div className="about-app">
+      <div className="about-app__header">
+        <img
+          className="about-app__photo"
+          src={resolveAsset(about.photo)}
+          alt={content.hero.name}
+          loading="lazy"
+        />
+        <p className="about-app__bio">{about.bio}</p>
       </div>
-    </Section>
+      <Tabs items={tabs} />
+    </div>
   );
 }

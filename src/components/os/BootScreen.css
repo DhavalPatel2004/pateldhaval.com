@@ -1,0 +1,66 @@
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  background: var(--color-bg);
+  transition: opacity 500ms ease;
+}
+
+.boot-screen.is-fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.boot-screen__logo {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  animation: boot-pulse 1.2s ease-in-out infinite;
+}
+
+.boot-screen__name {
+  font-family: var(--font-headline);
+  font-size: var(--fs-h4);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.boot-screen__bar {
+  width: 180px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-border-soft);
+  overflow: hidden;
+  margin-top: var(--space-4);
+}
+
+.boot-screen__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--color-accent);
+  animation: boot-fill 1.4s var(--ease-reveal) forwards;
+}
+
+@keyframes boot-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes boot-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

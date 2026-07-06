@@ -58,7 +58,8 @@
   /* Layout */
   --container-max: 1140px;
   --section-pad-y: var(--space-24);
-  --nav-height: 72px;
+  --nav-height: 36px;
+  --dock-clearance: 88px; /* dock height + bottom margin */
 }
 
 @media (max-width: 640px) {

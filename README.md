@@ -4,6 +4,12 @@ Personal portfolio website — [patel-dhaval.com](https://patel-dhaval.com)
 
 React + Vite static SPA, deployed to GitHub Pages via GitHub Actions.
 
+The site is built as **DhavalOS**, an interactive glass "operating system":
+visitors land on a desktop with a menu bar, dock, and icons; each portfolio
+section (About, Projects, Skills, Contact) opens as a draggable window, and
+there's a working Terminal app (`help` to explore). On mobile it behaves like
+a phone OS — a home-screen icon grid with full-screen apps.
+
 ## Editing content
 
 All page content (bio, work experience, education, clubs, skills, projects,

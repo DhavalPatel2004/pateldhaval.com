@@ -1,0 +1,249 @@
+/* Shared styles for app window content */
+
+.app-eyebrow {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.app-muted {
+  color: var(--color-text-soft);
+}
+
+.app-entries {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.app-entries h4 {
+  color: var(--color-text);
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-1);
+}
+
+.app-entries p {
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: var(--color-text-soft);
+}
+
+.app-entries--plain {
+  gap: var(--space-4);
+}
+
+/* --- Welcome --- */
+
+.welcome-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.welcome-app__photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+  box-shadow: 0 0 40px rgba(76, 141, 199, 0.3);
+  margin-bottom: var(--space-2);
+}
+
+.welcome-app__name {
+  font-size: var(--fs-h2);
+  letter-spacing: -0.02em;
+}
+
+.welcome-app__headline {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.welcome-app__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+/* --- About --- */
+
+.about-app__header {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+}
+
+.about-app__photo {
+  width: 120px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  flex-shrink: 0;
+}
+
+.about-app__bio {
+  color: var(--color-text-soft);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+}
+
+@media (max-width: 560px) {
+  .about-app__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* --- Projects --- */
+
+.projects-app__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.projects-app__more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
+/* --- Skills --- */
+
+.skills-app {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.skills-app__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-3);
+}
+
+.skills-app__item {
+  padding: var(--space-4);
+  text-align: center;
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  border-radius: var(--radius-md);
+  transition:
+    background var(--dur-ui) ease,
+    border-color var(--dur-ui) ease,
+    transform var(--dur-ui) ease;
+}
+
+.skills-app__item:hover {
+  background: var(--glass-fill-hover);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+/* --- Contact --- */
+
+.contact-app {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.contact-app__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contact-app__channels {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-app__channels a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--fs-small);
+  word-break: break-all;
+}
+
+.contact-app__channels a:hover {
+  color: var(--color-accent);
+}
+
+.contact-app .contact-form {
+  padding: var(--space-4);
+  background: rgba(11, 18, 32, 0.3);
+}
+
+@media (max-width: 700px) {
+  .contact-app {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Terminal --- */
+
+.terminal-app {
+  height: 100%;
+  overflow-y: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  cursor: text;
+}
+
+.terminal-app__line {
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.terminal-app__prompt {
+  color: var(--color-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.terminal-app__output {
+  font-family: inherit;
+  color: var(--color-text-soft);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: var(--space-2);
+}
+
+.terminal-app__input-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: baseline;
+}
+
+.terminal-app__input-row input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: inherit;
+  caret-color: var(--color-accent);
+}

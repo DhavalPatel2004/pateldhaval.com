@@ -1,0 +1,69 @@
+.desktop {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.desktop__icons {
+  position: absolute;
+  top: calc(36px + var(--space-6));
+  left: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  z-index: 1;
+}
+
+.desktop__wallpaper-signature {
+  position: absolute;
+  left: var(--space-8);
+  bottom: calc(var(--dock-clearance) + var(--space-6));
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.desktop__signature-name {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: rgba(237, 241, 245, 0.1);
+}
+
+.desktop__signature-role {
+  font-family: var(--font-headline);
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  color: rgba(127, 178, 229, 0.18);
+}
+
+/* Mobile: desktop icons become a phone home-screen grid. */
+@media (max-width: 768px) {
+  .desktop__icons {
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: 0 var(--space-4);
+  }
+
+  .desktop__wallpaper-signature {
+    left: var(--space-6);
+    right: var(--space-6);
+    bottom: calc(var(--dock-clearance) + var(--space-8));
+  }
+
+  .desktop__signature-name {
+    color: rgba(237, 241, 245, 0.35);
+  }
+
+  .desktop__signature-role {
+    color: rgba(127, 178, 229, 0.5);
+  }
+}
