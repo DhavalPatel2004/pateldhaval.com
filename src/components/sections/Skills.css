@@ -1,0 +1,23 @@
+.skills__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+
+.skills__item {
+  padding: var(--space-6);
+  text-align: center;
+  font-family: var(--font-headline);
+  font-weight: 600;
+  transition:
+    background var(--dur-ui) ease,
+    border-color var(--dur-ui) ease,
+    transform var(--dur-ui) ease;
+}
+
+.skills__item:hover {
+  background: var(--glass-fill-hover);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}

@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+}
+
+.navbar__brand {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.navbar__brand span {
+  color: var(--color-accent);
+}
+
+.navbar__brand:hover {
+  color: var(--color-text);
+}
+
+.navbar__links {
+  display: flex;
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.navbar__links a {
+  color: var(--color-text-soft);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  position: relative;
+  padding: var(--space-2) 0;
+}
+
+.navbar__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-ui) ease;
+}
+
+.navbar__links a:hover {
+  color: var(--color-text);
+}
+
+.navbar__links a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  padding: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: inline-flex;
+    z-index: 102;
+  }
+
+  .navbar__links {
+    /* backdrop-filter on .navbar makes it the containing block for this
+       fixed drawer, so bottom: 0 would resolve against the 72px bar —
+       use an explicit viewport height instead. */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: min(280px, 80vw);
+    flex-direction: column;
+    gap: var(--space-6);
+    padding: calc(var(--nav-height) + var(--space-8)) var(--space-8);
+    background: rgba(13, 21, 37, 0.98);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+    border-left: 1px solid var(--color-border-soft);
+    transform: translateX(100%);
+    transition: transform var(--dur-ui) ease;
+    z-index: 101;
+  }
+
+  .navbar__links.is-open {
+    transform: translateX(0);
+  }
+
+  .navbar__links a {
+    font-size: var(--fs-body);
+  }
+}
