@@ -1,0 +1,129 @@
+.about-page {
+  position: fixed;
+  inset: 0;
+  z-index: 180;
+  background: var(--color-bg);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: about-enter 500ms var(--ease-reveal);
+}
+
+@keyframes about-enter {
+  from {
+    opacity: 0;
+    transform: translateY(4vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: calc(var(--header-height) + var(--space-12)) var(--page-pad-x) var(--space-24);
+}
+
+.about-page__heading {
+  margin-bottom: var(--space-12);
+}
+
+.about-page__intro {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+  margin-bottom: var(--space-16);
+}
+
+.about-page__photo {
+  width: 220px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: saturate(0.9);
+}
+
+.about-page__bio {
+  color: var(--color-text-soft);
+  font-size: var(--fs-h4);
+  line-height: 1.6;
+}
+
+.about-page__section {
+  border-top: 1px solid var(--color-border-soft);
+  padding-top: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+.about-page__section-title {
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-8);
+}
+
+.about-page__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.about-page__list h3 {
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.about-page__list p {
+  color: var(--color-text-soft);
+  font-size: var(--fs-small);
+  max-width: 64ch;
+}
+
+.about-page__list--inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.about-page__list--inline li {
+  border: 1px solid var(--color-border-soft);
+  border-radius: 999px;
+  padding: var(--space-2) var(--space-6);
+  font-size: var(--fs-small);
+  color: var(--color-text-soft);
+}
+
+.about-page__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  border-top: 1px solid var(--color-border-soft);
+  padding-top: var(--space-8);
+}
+
+.about-page__footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-soft);
+  font-size: var(--fs-small);
+}
+
+.about-page__footer a:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .about-page__intro {
+    flex-direction: column;
+  }
+
+  .about-page__photo {
+    width: 160px;
+  }
+
+  .about-page__bio {
+    font-size: var(--fs-body);
+  }
+}

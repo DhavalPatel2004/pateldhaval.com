@@ -1,36 +1,20 @@
 :root {
-  /* Base */
-  --color-bg: #0b1220;
-  --color-bg-alt: #101b2d;
-  --color-text: #edf1f5;
-  --color-text-soft: #9fb2c8;
-  --color-border: rgba(140, 180, 220, 0.25);
-  --color-border-soft: rgba(140, 180, 220, 0.12);
-
-  /* Glass panels */
-  --glass-fill: rgba(76, 141, 199, 0.1);
-  --glass-fill-hover: rgba(76, 141, 199, 0.16);
-  --glass-blur: 16px;
-  --glass-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
-
-  /* Accent */
-  --color-accent: #7fb2e5;
-  --color-accent-strong: #4c8dc7;
-
-  /* Decorative glow */
-  --glow-a: rgba(76, 141, 199, 0.35);
-  --glow-b: rgba(127, 178, 229, 0.25);
+  /* Near-black minimal palette */
+  --color-bg: #0a0a0a;
+  --color-text: #f4f4f1;
+  --color-text-soft: #8f8f89;
+  --color-border-soft: rgba(244, 244, 241, 0.14);
 
   /* Type */
   --font-headline: "Manrope", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --fs-hero: 3.5rem;
-  --fs-h2: 2.5rem;
-  --fs-h3: 1.75rem;
+  --fs-display: clamp(3rem, 9vw, 7.5rem);
+  --fs-h2: clamp(2rem, 5vw, 3.5rem);
   --fs-h4: 1.25rem;
   --fs-body: 1.0625rem;
   --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
   --lh-body: 1.7;
 
   /* Spacing (4px base) */
@@ -43,12 +27,6 @@
   --space-12: 48px;
   --space-16: 64px;
   --space-24: 96px;
-  --space-32: 128px;
-
-  /* Radius */
-  --radius-lg: 20px;
-  --radius-md: 12px;
-  --radius-sm: 8px;
 
   /* Motion */
   --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
@@ -56,17 +34,6 @@
   --dur-ui: 220ms;
 
   /* Layout */
-  --container-max: 1140px;
-  --section-pad-y: var(--space-24);
-  --nav-height: 36px;
-  --dock-clearance: 88px; /* dock height + bottom margin */
-}
-
-@media (max-width: 640px) {
-  :root {
-    --fs-hero: 2.25rem;
-    --fs-h2: 1.875rem;
-    --fs-h3: 1.5rem;
-    --section-pad-y: var(--space-16);
-  }
+  --header-height: 76px;
+  --page-pad-x: clamp(20px, 5vw, 64px);
 }

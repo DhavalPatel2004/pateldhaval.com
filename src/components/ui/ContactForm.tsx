@@ -31,7 +31,7 @@ export function ContactForm() {
   };
 
   return (
-    <form className="contact-form glass" onSubmit={handleSubmit}>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <label className="contact-form__field">
         <span>Name</span>
         <input type="text" name="Name" placeholder="Your name" required />

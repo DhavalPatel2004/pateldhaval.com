@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--page-pad-x);
+  pointer-events: none; /* let gallery receive events between the two clusters */
+}
+
+.header__name {
+  color: var(--color-text);
+  pointer-events: auto;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  pointer-events: auto;
+}
+
+.header__social {
+  color: var(--color-text-soft);
+  display: inline-flex;
+}
+
+.header__social:hover {
+  color: var(--color-text);
+}
+
+.header__about {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 999px;
+  color: var(--color-text);
+  padding: var(--space-2) var(--space-6);
+  transition: background var(--dur-ui) ease, color var(--dur-ui) ease;
+}
+
+.header__about:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
